@@ -36,7 +36,9 @@ def main():
 # sets the global variables
 def read_json():
 
-    with open(os.path.dirname(os.path.realpath(__file__)) + '/' + CONFIG_FILE) as f:
+    path = os.path.dirname(os.path.realpath(__file__)) + '/' + CONFIG_FILE
+
+    with open(path) as f:
         data = json.load(f)
 
         username = data['username']
