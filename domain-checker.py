@@ -2,6 +2,7 @@
 # James Lowther | 2020/04/30
 
 import smtplib, whois, json
+from datetime import datetime
 
 CONFIG_FILE = './config.json'
 
@@ -22,6 +23,8 @@ def main():
         
         for domain in possible_domains:
             message += "The domain name '" + domain + "' may be available.\n"
+
+        message += "\nScript run at: " + datetime.now().strftime('%d-%b-%Y (%H:%M:%S)')
 
         send_message(server, recipients, username, message)
 
