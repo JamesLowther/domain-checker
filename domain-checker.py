@@ -1,10 +1,10 @@
 # Domain name checker
 # James Lowther | 2020/04/30
 
-import smtplib, whois, json
+import smtplib, whois, json, os
 from datetime import datetime
 
-CONFIG_FILE = './config.json'
+CONFIG_FILE = 'config.json'
 
 # currently configured for gmail
 SMTP_HOST = 'smtp.gmail.com'
@@ -36,7 +36,7 @@ def main():
 # sets the global variables
 def read_json():
 
-    with open(CONFIG_FILE) as f:
+    with open(os.path.dirname(os.path.realpath(__file__)) + '/' + CONFIG_FILE) as f:
         data = json.load(f)
 
         username = data['username']
