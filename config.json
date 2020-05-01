@@ -1,0 +1,11 @@
+{
+    "username": "this.is.actually.not.a.robot@gmail.com",
+    "password": "iamnotarobot",
+    "recipients": [
+        "jamesevlowther@gmail.com"
+    ],
+    "domains": [
+        "jameslowther.com",
+        "hwooallows.com"
+    ]
+}
