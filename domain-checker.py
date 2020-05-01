@@ -21,9 +21,10 @@ def main():
     # send email if possible domains exist
     if (possible_domains):
         message = "Subject: Domain name(s) may be available\n\n"
+        message += "The following domain(s) may be available:\n\n"
         
         for domain in possible_domains:
-            message += "The domain name '" + domain + "' may be available.\n"
+            message += domain + "\n"
 
         message += "\nScript run at: " + datetime.now().strftime('%d-%b-%Y (%H:%M:%S)')
 
