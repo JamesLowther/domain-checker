@@ -15,7 +15,8 @@ def main():
     username, password, recipients, domains = read_json()
 
     server = gmail_login(username, password)
-    possible_domains = check_domains(server, domains)
+    possible_domains = check_domains(domains)
+
 
     # send email if possible domains exist
     if (possible_domains):
@@ -61,7 +62,7 @@ def gmail_login(username, password):
     return server
 
 # returns a list of domains that may be available
-def check_domains(server, domains):
+def check_domains(domains):
 
     possible_domains = []
 
